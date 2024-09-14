@@ -4,46 +4,53 @@ let compScore = 0;
 let round = 0;
 let humanOption;
 let dispRound;
-let arr = ["ROCK", "PAPER", "SCISSOR"];
+let compOption = 0;
+let arr = ["rock", "paper", "scissor"];
 
 function compInput() {
-  let compOption = arr[Math.floor(Math.ramdom() * 2)];
+  compOption = arr[Math.floor(Math.random() * 2)];
+  document.getElementById("new").innerHTML = compOption;
+
+  return;
 }
 
-function clickedPAPER() {
-  humanOption = "PAPER";
-  compInput();
+console.log("CONNECTED!");
+document.getElementById("round").innerHTML = "ROUND  " + round;
+
+function clickedPaper() {
+  humanOption = "paper";
   runRound();
+  return;
 }
 
-function clickedROCK() {
-  humanOption = "ROCK";
-  compInput();
+function clickedRock() {
+  humanOption = "rock";
   runRound();
+  return;
 }
 
 function clickedScissor() {
-  humanOption = "SCISSOR";
-  compInput();
+  humanOption = "scissor";
+
   runRound();
+  return;
 }
 
 function runRound() {
-  dispRound = "ROUND " + round;
-  document.getElementById("ROUND").innerHTML = dispRound;
   if (round <= 5) {
+    compInput();
     if (
-      (humanOption == "ROCK" && compOption == "SCISSOR") ||
-      (humanOption == "PAPER" && compOption == "ROCK") ||
-      (humanOption == "SCISSOR" && compOption == "PAPER")
+      (humanOption == "rock" && compOption == "scissor") ||
+      (humanOption == "paper" && compOption == "rock") ||
+      (humanOption == "scissor" && compOption == "paper")
     ) {
       result = "You Won!\n";
       choice = "You chose " + humanOption + " computer chose " + compOption;
       humanScore = humanScore + 1;
     } else if (
-      (humanOption == "SCISSOR" && compOption == "ROCK") ||
-      (humanOption == "ROCK" && compOption == "PAPER") ||
-      (humanOption == "PAPER" && compOption == "SCISSOR")
+      (humanOption == "scissor" && compOption == "rock") ||
+      (humanOption == "rock" && compOption == "paper") ||
+      (humanOption == "paper" && compOption == "scissor")
     ) {
       result = "You Lost!\n";
       choice = "You chose " + humanOption + " computer chose " + compOption;
@@ -55,10 +62,14 @@ function runRound() {
 
     if (humanScore == 5) {
       result = "You Won the game!";
-      disableButtons();
     } else if (compScore == 5) {
       result = "You Lost the game!";
-      disableButtons();
     }
   }
+
+  document.getElementById("choice").innerHTML = choice;
+  document.getElementById("result").innerHTML = result;
+  document.getElementById("humanscore").innerHTML = humanScore;
+  document.getElementById("compscore").innerHTML = compScore;
+  return;
 }
