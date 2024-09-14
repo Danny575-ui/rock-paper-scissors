@@ -67,7 +67,8 @@ function runRound() {
 
   document.getElementById("choice").innerHTML = choice;
 
-  document.getElementById("humanscore").innerHTML = humanScore;
-  document.getElementById("compscore").innerHTML = compScore;
+  document.getElementById("humanscore").innerHTML = "YOUR SCORE: " + humanScore;
+  document.getElementById("compscore").innerHTML =
+    "COMPUTER SCORE: " + compScore;
   return;
 }

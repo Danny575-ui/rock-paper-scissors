@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-  <head> 
+  <head>
     <title>ROCK-PAPER-SCISSORS</title>
     <meta chartset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    </link>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
-
-  
   <body>
-    <h2>JAN-KEN</h2>
-    <p>GO!!</p>
-    
-    
-    
-    <script src="script.js">      
-    </script>
+    <div class="inner">
+      <main>
+        <h1>JAN-KEN</h1>
+        <h2>GO!!</h2>
 
-    <button type="button" onclick="clickedRock()">ROCK</button>
-    <button type="button" onclick="clickedPaper()">PAPER</button>
-    <button type="button" onclick="clickedScissor()">SCISSOR</button>
-    
-    <p id="choice"></p>
-    
-    <p id="humanscore"></p>
-    <p id="compscore"></p>
-   
+        <script src="script.js"></script>
+        <div class="flex-container">
+          <div class="item">
+            <button type="button" onclick="clickedRock()">ROCK</button>
+          </div>
+          <div class="item">
+            <button type="button" onclick="clickedPaper()">PAPER</button>
+          </div>
+          <div class="item">
+            <button type="button" onclick="clickedScissor()">SCISSOR</button>
+          </div>
+        </div>
 
+        <p id="choice"></p>
+
+        <p id="humanscore"></p>
+        <p id="compscore"></p>
+      </main>
+
+      <footer>
+        <p>
+          <a href="https://github.com/Danny575-ui" target="_blank"
+            >Visit my works</a
+          >
+        </p>
+      </footer>
+    </div>
   </body>
-
-
-
-
-
 </html>

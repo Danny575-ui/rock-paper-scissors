@@ -1,3 +1,75 @@
-.backCol {
-  display: black;
+body {
+  background-color: rgb(59, 57, 57);
+  text-align: center;
+  padding: 20px;
+}
+
+.inner {
+  width: 9999px;
+  background-color: rgb(159, 216, 74);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.flex-container {
+  display: flex;
+  background-color: beige;
+  padding: 24px;
+  border: white;
+  justify-content: space-evenly;
+}
+
+.items {
+  flex: 4 1 0%;
+  margin: 4px;
+}
+
+button {
+  width: 120px;
+  height: 80px;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+#choice {
+  font-size: 45px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(46, 35, 35);
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
+}
+
+#humanscore {
+  font-family: sans-serif;
+  font-size: 25px;
+  color: rgb(46, 35, 35);
+}
+
+#compscore {
+  font-family: sans-serif;
+  font-size: 25px;
+  color: rgb(46, 35, 35);
 }
